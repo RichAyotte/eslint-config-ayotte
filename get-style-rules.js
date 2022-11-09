@@ -28,7 +28,7 @@ module.exports = ({severity, devSeverity}) => ({
 	, 'func-call-spacing': severity
 	, 'func-name-matching': severity
 	, 'func-names': [severity, 'as-needed']
-	, 'func-style': [severity, 'expression']
+	, 'func-style': [severity, 'declaration']
 	, 'id-blacklist': [severity, 'callback']
 	, 'id-length': 'off'
 	, 'id-match': 'off'
