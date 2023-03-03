@@ -119,7 +119,7 @@ module.exports = ({severity, devSeverity}) => ({
 			, consistent: true
 		}
 	]
-	, 'object-curly-spacing': severity
+	, 'object-curly-spacing': [severity, 'never']
 	, 'object-property-newline': severity
 	, 'one-var': [severity, 'never']
 	, 'one-var-declaration-per-line': 'off'
