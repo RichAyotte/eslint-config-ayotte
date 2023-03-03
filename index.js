@@ -43,9 +43,10 @@ module.exports = {
 		, node: true
 	}
 	, extends: extensions
+	, parser: '@typescript-eslint/parser'
 	, parserOptions: {
 		ecmaVersion: 'latest'
 	}
-	, plugins: ['import', 'promise']
+	, plugins: ['import', 'promise', '@typescript-eslint']
 	, rules
 }
