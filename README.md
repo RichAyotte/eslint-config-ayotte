@@ -7,8 +7,6 @@ Ayotte Software JavaScript Style Guide
 In your `.eslint.js`
 
 ```javascript
-'use strict'
-
 export default {
 	extends: [
 		'ayotte'
