@@ -1,3 +1,2 @@
-const config = await import('./.eslintrc.cjs')
-
+import config from './.eslintrc.cjs'
 export default config
