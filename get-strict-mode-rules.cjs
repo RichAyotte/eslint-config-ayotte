@@ -1,3 +1,3 @@
-module.exports = ({severity, devSeverity}) => ({
+module.exports = ({severity}) => ({
 	strict: [severity, 'safe'],
 })

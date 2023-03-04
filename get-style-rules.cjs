@@ -1,3 +1,4 @@
+// eslint-disable-next-line max-lines-per-function
 module.exports = ({severity, devSeverity}) => ({
 	'array-bracket-newline': [
 		severity,

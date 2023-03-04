@@ -1,4 +1,4 @@
-module.exports = ({severity, devSeverity}) => ({
+module.exports = ({severity}) => ({
 	'no-await-in-loop': severity,
 	'no-compare-neg-zero': severity,
 	'no-extra-parens': [severity, 'functions'],

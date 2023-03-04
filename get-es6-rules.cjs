@@ -1,4 +1,4 @@
-module.exports = ({severity, devSeverity}) => ({
+module.exports = ({severity}) => ({
 	'arrow-body-style': [severity, 'as-needed'],
 	'arrow-parens': [severity, 'as-needed'],
 	'arrow-spacing': [

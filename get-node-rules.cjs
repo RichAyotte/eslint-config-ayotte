@@ -1,4 +1,4 @@
-module.exports = ({severity, devSeverity}) => ({
+module.exports = ({severity}) => ({
 	'callback-return': severity,
 	'global-require': severity,
 	'handle-callback-err': severity,

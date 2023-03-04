@@ -33,6 +33,9 @@ module.exports = {
 		node: true,
 	},
 	extends: extensions,
+	overrides: [{
+		files: ['*.js', '*.cjs', '*.ts', '*.mjs', 'tsx'],
+	}],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaVersion: 'latest',

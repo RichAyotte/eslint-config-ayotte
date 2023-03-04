@@ -1,4 +1,4 @@
-module.exports = ({severity, devSeverity}) => ({
+module.exports = ({severity}) => ({
 	'promise/always-return': 'off',
 	'promise/avoid-new': 'off',
 	'promise/catch-or-return': severity,
