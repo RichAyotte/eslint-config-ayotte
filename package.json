@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-ayotte",
-	"version": "1.6.0",
+	"version": "2.0.0",
 	"description": "Ayotte style eslinting",
 	"keywords": [
 		"eslint",
@@ -8,9 +8,13 @@
 		"ayotte",
 		"ayottesoftware"
 	],
+	"type": "module",
 	"main": "index.js",
 	"author": "Richard Ayotte",
 	"license": "MIT",
+	"scripts": {
+		"lint": "eslint --fix ."
+	},
 	"peerDependencies": {
 		"@typescript-eslint/eslint-plugin": "^5.54.0",
 		"@typescript-eslint/parser": "^5.54.0",

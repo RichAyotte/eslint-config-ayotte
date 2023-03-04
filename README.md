@@ -9,7 +9,7 @@ In your `.eslint.js`
 ```javascript
 'use strict'
 
-module.exports = {
+export default {
 	extends: [
 		'ayotte'
 	]
