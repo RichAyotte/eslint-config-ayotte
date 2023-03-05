@@ -4,10 +4,10 @@ Ayotte Software JavaScript Style Guide
 *Probably a different coding style than you're used to.*
 
 ## Usage
-In your `.eslint.js`
+In your `.eslintrc.js`
 
 ```javascript
-export default {
+module.exports = {
 	extends: [
 		'ayotte'
 	]
