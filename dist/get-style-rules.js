@@ -2,11 +2,23 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 // eslint-disable-next-line max-lines-per-function
 exports.default = ({ severity, dev_severity, }) => ({
+    '@typescript-eslint/naming-convention': [
+        'error',
+        {
+            format: ['snake_case'],
+            selector: [
+                'variable',
+                'function',
+                'parameter',
+            ],
+        },
+    ],
+    '@typescript-eslint/type-annotation-spacing': severity,
     'array-bracket-newline': [
         severity,
         {
-            multiline: true,
             minItems: 2,
+            multiline: true,
         },
     ],
     'array-bracket-spacing': [
@@ -16,8 +28,8 @@ exports.default = ({ severity, dev_severity, }) => ({
     'array-element-newline': [
         severity,
         {
-            multiline: true,
             minItems: 2,
+            multiline: true,
         },
     ],
     'block-spacing': severity,
@@ -33,18 +45,6 @@ exports.default = ({ severity, dev_severity, }) => ({
             ignoreInlineComments: true,
         },
     ],
-    '@typescript-eslint/naming-convention': [
-        'error',
-        {
-            selector: [
-                'variable',
-                'function',
-                'parameter',
-            ],
-            format: ['snake_case'],
-        },
-    ],
-    '@typescript-eslint/type-annotation-spacing': severity,
     'comma-dangle': [
         severity,
         'always-multiline',
@@ -92,21 +92,25 @@ exports.default = ({ severity, dev_severity, }) => ({
     'lines-around-comment': [
         severity,
         {
-            beforeBlockComment: true,
             afterBlockComment: false,
-            beforeLineComment: false,
             afterLineComment: false,
-            allowBlockStart: true,
-            allowBlockEnd: true,
-            allowObjectStart: true,
-            allowObjectEnd: true,
-            allowArrayStart: true,
             allowArrayEnd: true,
-            allowClassStart: true,
+            allowArrayStart: true,
+            allowBlockEnd: true,
+            allowBlockStart: true,
             allowClassEnd: true,
+            allowClassStart: true,
+            allowObjectEnd: true,
+            allowObjectStart: true,
+            beforeBlockComment: true,
+            beforeLineComment: false,
         },
     ],
     'lines-around-directive': severity,
+    'max-classes-per-file': [
+        severity,
+        1,
+    ],
     'max-depth': [
         severity,
         3,
@@ -129,6 +133,14 @@ exports.default = ({ severity, dev_severity, }) => ({
             skipComments: true,
         },
     ],
+    'max-lines-per-function': [
+        severity,
+        {
+            max: 150,
+            skipBlankLines: true,
+            skipComments: true,
+        },
+    ],
     'max-nested-callbacks': [
         severity,
         3,
@@ -144,18 +156,6 @@ exports.default = ({ severity, dev_severity, }) => ({
     'max-statements-per-line': [
         severity,
         { max: 1 },
-    ],
-    'max-classes-per-file': [
-        severity,
-        1,
-    ],
-    'max-lines-per-function': [
-        severity,
-        {
-            max: 150,
-            skipBlankLines: true,
-            skipComments: true,
-        },
     ],
     'multiline-ternary': 'off',
     'new-cap': severity,
@@ -242,8 +242,18 @@ exports.default = ({ severity, dev_severity, }) => ({
         'never',
     ],
     'semi-spacing': 'off',
-    'sort-keys': 'off',
-    'sort-vars': 'off',
+    'sort-keys': [
+        severity,
+        'asc',
+        {
+            caseSensitive: false,
+            natural: true,
+        },
+    ],
+    'sort-vars': [
+        severity,
+        { ignoreCase: true },
+    ],
     'space-before-blocks': [
         severity,
         'always',
@@ -251,9 +261,9 @@ exports.default = ({ severity, dev_severity, }) => ({
     'space-before-function-paren': [
         severity,
         {
-            named: 'never',
             anonymous: 'never',
             asyncArrow: 'always',
+            named: 'never',
         },
     ],
     'space-in-parens': [

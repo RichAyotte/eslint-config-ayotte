@@ -9,11 +9,23 @@ type Input = {
 export default ({
 	severity, dev_severity,
 }: Input) => ({
+	'@typescript-eslint/naming-convention': [
+		'error',
+		{
+			format: ['snake_case'],
+			selector: [
+				'variable',
+				'function',
+				'parameter',
+			],
+		},
+	],
+	'@typescript-eslint/type-annotation-spacing': severity,
 	'array-bracket-newline': [
 		severity,
 		{
-			multiline: true,
 			minItems: 2,
+			multiline: true,
 		},
 	],
 	'array-bracket-spacing': [
@@ -23,8 +35,8 @@ export default ({
 	'array-element-newline': [
 		severity,
 		{
-			multiline: true,
 			minItems: 2,
+			multiline: true,
 		},
 	],
 	'block-spacing': severity,
@@ -40,18 +52,6 @@ export default ({
 			ignoreInlineComments: true,
 		},
 	],
-	'@typescript-eslint/naming-convention': [
-		'error',
-		{
-			selector: [
-				'variable',
-				'function',
-				'parameter',
-			],
-			format: ['snake_case'],
-		},
-	],
-	'@typescript-eslint/type-annotation-spacing': severity,
 	'comma-dangle': [
 		severity,
 		'always-multiline',
@@ -99,21 +99,25 @@ export default ({
 	'lines-around-comment': [
 		severity,
 		{
-			beforeBlockComment: true,
 			afterBlockComment: false,
-			beforeLineComment: false,
 			afterLineComment: false,
-			allowBlockStart: true,
-			allowBlockEnd: true,
-			allowObjectStart: true,
-			allowObjectEnd: true,
-			allowArrayStart: true,
 			allowArrayEnd: true,
-			allowClassStart: true,
+			allowArrayStart: true,
+			allowBlockEnd: true,
+			allowBlockStart: true,
 			allowClassEnd: true,
+			allowClassStart: true,
+			allowObjectEnd: true,
+			allowObjectStart: true,
+			beforeBlockComment: true,
+			beforeLineComment: false,
 		},
 	],
 	'lines-around-directive': severity,
+	'max-classes-per-file': [
+		severity,
+		1,
+	],
 	'max-depth': [
 		severity,
 		3,
@@ -136,6 +140,14 @@ export default ({
 			skipComments: true,
 		},
 	],
+	'max-lines-per-function': [
+		severity,
+		{
+			max: 150,
+			skipBlankLines: true,
+			skipComments: true,
+		},
+	],
 	'max-nested-callbacks': [
 		severity,
 		3,
@@ -151,18 +163,6 @@ export default ({
 	'max-statements-per-line': [
 		severity,
 		{ max: 1 },
-	],
-	'max-classes-per-file': [
-		severity,
-		1,
-	],
-	'max-lines-per-function': [
-		severity,
-		{
-			max: 150,
-			skipBlankLines: true,
-			skipComments: true,
-		},
 	],
 	'multiline-ternary': 'off',
 	'new-cap': severity,
@@ -249,8 +249,18 @@ export default ({
 		'never',
 	],
 	'semi-spacing': 'off',
-	'sort-keys': 'off',
-	'sort-vars': 'off',
+	'sort-keys': [
+		severity,
+		'asc',
+		{
+			caseSensitive: false,
+			natural: true,
+		},
+	],
+	'sort-vars': [
+		severity,
+		{ ignoreCase: true },
+	],
 	'space-before-blocks': [
 		severity,
 		'always',
@@ -258,9 +268,9 @@ export default ({
 	'space-before-function-paren': [
 		severity,
 		{
-			named: 'never',
 			anonymous: 'never',
 			asyncArrow: 'always',
+			named: 'never',
 		},
 	],
 	'space-in-parens': [

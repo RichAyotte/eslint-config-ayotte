@@ -17,15 +17,15 @@ export default ({ severity }: Input) => ({
 	'arrow-spacing': [
 		severity,
 		{
-			before: true,
 			after: true,
+			before: true,
 		},
 	],
 	'generator-star-spacing': [
 		severity,
 		{
-			before: false,
 			after: true,
+			before: false,
 		},
 	],
 	'import/order': [
@@ -61,7 +61,15 @@ export default ({ severity }: Input) => ({
 		severity,
 		'never',
 	],
-	'sort-imports': 'off',
+	'sort-imports': [
+		severity,
+		{
+			allowSeparatedGroups: true,
+			ignoreCase: true,
+			ignoreDeclarationSort: false,
+			ignoreMemberSort: false,
+		},
+	],
 	'symbol-description': severity,
 	'template-curly-spacing': [
 		severity,

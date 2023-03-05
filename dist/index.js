@@ -23,19 +23,14 @@ const rules = [
 ].reduce((accum, get_rules) => ({
     ...accum,
     ...get_rules({
-        severity,
         dev_severity,
+        severity,
     }),
 }), {});
 const config = {
     env: {
         es6: true,
         node: true,
-    },
-    parser: '@typescript-eslint/parser',
-    parserOptions: {
-        ecmaVersion: 'latest',
-        project: true,
     },
     extends: extensions_1.default,
     overrides: [
@@ -49,6 +44,11 @@ const config = {
             ],
         },
     ],
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        ecmaVersion: 'latest',
+        project: true,
+    },
     plugins: [
         'import',
         'promise',

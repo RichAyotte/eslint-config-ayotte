@@ -12,15 +12,15 @@ exports.default = ({ severity }) => ({
     'arrow-spacing': [
         severity,
         {
-            before: true,
             after: true,
+            before: true,
         },
     ],
     'generator-star-spacing': [
         severity,
         {
-            before: false,
             after: true,
+            before: false,
         },
     ],
     'import/order': [
@@ -56,7 +56,15 @@ exports.default = ({ severity }) => ({
         severity,
         'never',
     ],
-    'sort-imports': 'off',
+    'sort-imports': [
+        severity,
+        {
+            allowSeparatedGroups: true,
+            ignoreCase: true,
+            ignoreDeclarationSort: false,
+            ignoreMemberSort: false,
+        },
+    ],
     'symbol-description': severity,
     'template-curly-spacing': [
         severity,

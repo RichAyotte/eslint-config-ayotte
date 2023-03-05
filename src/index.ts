@@ -1,4 +1,5 @@
 import { Linter } from 'eslint'
+
 import extensions from './extensions'
 import getBestPracticeRules from './get-best-practices-rules'
 import getErrorRules from './get-error-rules'
@@ -24,8 +25,8 @@ const rules = [
 ].reduce((accum, get_rules) => ({
 	...accum,
 	...get_rules({
-		severity,
 		dev_severity,
+		severity,
 	}),
 }), {})
 
@@ -34,11 +35,6 @@ const config: Linter.Config = {
 	env: {
 		es6: true,
 		node: true,
-	},
-	parser: '@typescript-eslint/parser',
-	parserOptions: {
-		ecmaVersion: 'latest',
-		project: true,
 	},
 	extends: extensions,
 	overrides: [
@@ -52,6 +48,11 @@ const config: Linter.Config = {
 			],
 		},
 	],
+	parser: '@typescript-eslint/parser',
+	parserOptions: {
+		ecmaVersion: 'latest',
+		project: true,
+	},
 	plugins: [
 		'import',
 		'promise',
