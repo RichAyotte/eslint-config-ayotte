@@ -1,21 +1,33 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = ({ severity, devSeverity }) => ({
+exports.default = ({ severity, dev_severity, }) => ({
     'accessor-pairs': severity,
     'array-callback-return': severity,
     'block-scoped-var': severity,
     'class-methods-use-this': severity,
-    complexity: [severity, 8],
+    complexity: [
+        severity,
+        8,
+    ],
     'consistent-return': 'off',
-    curly: [severity, 'all'],
+    curly: [
+        severity,
+        'all',
+    ],
     'default-case': 'off',
-    'dot-location': [severity, 'property'],
+    'dot-location': [
+        severity,
+        'property',
+    ],
     'dot-notation': severity,
-    eqeqeq: [severity, 'smart'],
+    eqeqeq: [
+        severity,
+        'smart',
+    ],
     'guard-for-in': severity,
-    'no-alert': devSeverity,
-    'no-console': devSeverity,
-    'no-debugger': devSeverity,
+    'no-alert': dev_severity,
+    'no-console': dev_severity,
+    'no-debugger': dev_severity,
     'no-caller': severity,
     'no-div-regex': severity,
     'no-else-return': severity,
@@ -35,7 +47,10 @@ exports.default = ({ severity, devSeverity }) => ({
     'no-labels': severity,
     'no-lone-blocks': severity,
     'no-loop-func': severity,
-    'no-magic-numbers': ['off', { enforceConst: true }],
+    'no-magic-numbers': [
+        'off',
+        { enforceConst: true },
+    ],
     'no-multi-spaces': severity,
     'no-multi-str': severity,
     'no-new': severity,
@@ -59,7 +74,7 @@ exports.default = ({ severity, devSeverity }) => ({
     'no-useless-escape': severity,
     'no-useless-return': severity,
     'no-void': severity,
-    'no-warning-comments': devSeverity,
+    'no-warning-comments': dev_severity,
     'no-with': severity,
     'prefer-promise-reject-errors': severity,
     radix: severity,

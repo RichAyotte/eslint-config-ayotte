@@ -1,4 +1,4 @@
-import {Linter} from 'eslint'
+import { Linter } from 'eslint'
 import extensions from './extensions'
 import getBestPracticeRules from './get-best-practices-rules'
 import getErrorRules from './get-error-rules'
@@ -10,20 +10,22 @@ import getStyleRules from './get-style-rules'
 import getVariableRules from './get-variable-rules'
 
 const severity = process.env.NODE_ENV === 'production' ? 'error' : 'warn'
-const devSeverity = process.env.NODE_ENV === 'production' ? 'error' : 'off'
+const dev_severity = process.env.NODE_ENV === 'production' ? 'error' : 'off'
 
-const rules = [getBestPracticeRules,
+const rules = [
+	getBestPracticeRules,
 	getErrorRules,
 	getEs6Rules,
 	getNodeRules,
 	getPromiseRules,
 	getStyleRules,
 	getVariableRules,
-	getStrictModeRules].reduce((accum, getRules) => ({
+	getStrictModeRules,
+].reduce((accum, get_rules) => ({
 	...accum,
-	...getRules({
+	...get_rules({
 		severity,
-		devSeverity,
+		dev_severity,
 	}),
 }), {})
 
@@ -36,18 +38,27 @@ const config: Linter.Config = {
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaVersion: 'latest',
+		project: true,
 	},
 	extends: extensions,
-	overrides: [{
-		files: ['*.js', '*.cjs', '*.ts', '*.mjs', '*.tsx'],
-	}],
-	plugins: ['import', 'promise', '@typescript-eslint'],
-	rules,
-	settings: {
-		'import/resolver': {
-			typescript: true,
+	overrides: [
+		{
+			files: [
+				'*.js',
+				'*.cjs',
+				'*.ts',
+				'*.mjs',
+				'*.tsx',
+			],
 		},
-	},
+	],
+	plugins: [
+		'import',
+		'promise',
+		'@typescript-eslint',
+	],
+	rules,
+	settings: { 'import/resolver': { typescript: true }},
 }
 
 module.exports = config

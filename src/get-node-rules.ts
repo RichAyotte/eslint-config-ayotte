@@ -1,11 +1,11 @@
-import {Linter} from 'eslint'
+import { Linter } from 'eslint'
 
 type Input = {
 	severity: Linter.RuleLevel
-	devSeverity: Linter.RuleLevel
+	dev_severity: Linter.RuleLevel
 }
 
-export default ({severity}:Input) => ({
+export default ({ severity }: Input) => ({
 	'callback-return': severity,
 	'global-require': severity,
 	'handle-callback-err': severity,

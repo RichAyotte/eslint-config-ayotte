@@ -10,19 +10,21 @@ const get_strict_mode_rules_1 = require("./get-strict-mode-rules");
 const get_style_rules_1 = require("./get-style-rules");
 const get_variable_rules_1 = require("./get-variable-rules");
 const severity = process.env.NODE_ENV === 'production' ? 'error' : 'warn';
-const devSeverity = process.env.NODE_ENV === 'production' ? 'error' : 'off';
-const rules = [get_best_practices_rules_1.default,
+const dev_severity = process.env.NODE_ENV === 'production' ? 'error' : 'off';
+const rules = [
+    get_best_practices_rules_1.default,
     get_error_rules_1.default,
     get_es6_rules_1.default,
     get_node_rules_1.default,
     get_promise_rules_1.default,
     get_style_rules_1.default,
     get_variable_rules_1.default,
-    get_strict_mode_rules_1.default].reduce((accum, getRules) => ({
+    get_strict_mode_rules_1.default,
+].reduce((accum, get_rules) => ({
     ...accum,
-    ...getRules({
+    ...get_rules({
         severity,
-        devSeverity,
+        dev_severity,
     }),
 }), {});
 const config = {
@@ -33,17 +35,26 @@ const config = {
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 'latest',
+        project: true,
     },
     extends: extensions_1.default,
-    overrides: [{
-            files: ['*.js', '*.cjs', '*.ts', '*.mjs', '*.tsx'],
-        }],
-    plugins: ['import', 'promise', '@typescript-eslint'],
-    rules,
-    settings: {
-        'import/resolver': {
-            typescript: true,
+    overrides: [
+        {
+            files: [
+                '*.js',
+                '*.cjs',
+                '*.ts',
+                '*.mjs',
+                '*.tsx',
+            ],
         },
-    },
+    ],
+    plugins: [
+        'import',
+        'promise',
+        '@typescript-eslint',
+    ],
+    rules,
+    settings: { 'import/resolver': { typescript: true } },
 };
 module.exports = config;

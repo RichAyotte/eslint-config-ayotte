@@ -1,13 +1,19 @@
-import {Linter} from 'eslint'
+import { Linter } from 'eslint'
 
 type Input = {
 	severity: Linter.RuleLevel
-	devSeverity: Linter.RuleLevel
+	dev_severity: Linter.RuleLevel
 }
 
-export default ({severity}:Input) => ({
-	'arrow-body-style': [severity, 'as-needed'],
-	'arrow-parens': [severity, 'as-needed'],
+export default ({ severity }: Input) => ({
+	'arrow-body-style': [
+		severity,
+		'as-needed',
+	],
+	'arrow-parens': [
+		severity,
+		'as-needed',
+	],
 	'arrow-spacing': [
 		severity,
 		{
@@ -51,9 +57,15 @@ export default ({severity}:Input) => ({
 	'prefer-rest-params': severity,
 	'prefer-spread': severity,
 	'prefer-template': severity,
-	'rest-spread-spacing': [severity, 'never'],
+	'rest-spread-spacing': [
+		severity,
+		'never',
+	],
 	'sort-imports': 'off',
 	'symbol-description': severity,
-	'template-curly-spacing': [severity, 'never'],
+	'template-curly-spacing': [
+		severity,
+		'never',
+	],
 	'yield-star-spacing': severity,
 })

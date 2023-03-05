@@ -1,8 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = ({ severity }) => ({
-    'arrow-body-style': [severity, 'as-needed'],
-    'arrow-parens': [severity, 'as-needed'],
+    'arrow-body-style': [
+        severity,
+        'as-needed',
+    ],
+    'arrow-parens': [
+        severity,
+        'as-needed',
+    ],
     'arrow-spacing': [
         severity,
         {
@@ -46,9 +52,15 @@ exports.default = ({ severity }) => ({
     'prefer-rest-params': severity,
     'prefer-spread': severity,
     'prefer-template': severity,
-    'rest-spread-spacing': [severity, 'never'],
+    'rest-spread-spacing': [
+        severity,
+        'never',
+    ],
     'sort-imports': 'off',
     'symbol-description': severity,
-    'template-curly-spacing': [severity, 'never'],
+    'template-curly-spacing': [
+        severity,
+        'never',
+    ],
     'yield-star-spacing': severity,
 });
