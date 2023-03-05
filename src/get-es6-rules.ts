@@ -1,4 +1,11 @@
-module.exports = ({severity}) => ({
+import {Linter} from 'eslint'
+
+type Input = {
+	severity: Linter.RuleLevel
+	devSeverity: Linter.RuleLevel
+}
+
+export default ({severity}:Input) => ({
 	'arrow-body-style': [severity, 'as-needed'],
 	'arrow-parens': [severity, 'as-needed'],
 	'arrow-spacing': [

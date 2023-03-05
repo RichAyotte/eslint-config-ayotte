@@ -1,5 +1,12 @@
+import {Linter} from 'eslint'
+
+type Input = {
+	severity: Linter.RuleLevel
+	devSeverity: Linter.RuleLevel
+}
+
 // eslint-disable-next-line max-lines-per-function
-module.exports = ({severity, devSeverity}) => ({
+export default ({severity, devSeverity}:Input) => ({
 	'array-bracket-newline': [
 		severity,
 		'consistent',

@@ -1,4 +1,11 @@
-module.exports = ({severity}) => ({
+import {Linter} from 'eslint'
+
+type Input = {
+	severity: Linter.RuleLevel
+	devSeverity: Linter.RuleLevel
+}
+
+export default ({severity}:Input) => ({
 	'promise/always-return': 'off',
 	'promise/avoid-new': 'off',
 	'promise/catch-or-return': severity,

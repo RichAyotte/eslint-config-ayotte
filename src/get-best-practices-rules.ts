@@ -1,4 +1,11 @@
-module.exports = ({severity, devSeverity}) => ({
+import {Linter} from 'eslint'
+
+type Input = {
+	severity: Linter.RuleLevel
+	devSeverity: Linter.RuleLevel
+}
+
+export default ({severity, devSeverity}: Input) => ({
 	'accessor-pairs': severity,
 	'array-callback-return': severity,
 	'block-scoped-var': severity,
