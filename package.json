@@ -1,33 +1,6 @@
 {
-	"name": "eslint-config-ayotte",
-	"version": "2.2.1",
-	"description": "Ayotte style eslinting",
-	"keywords": [
-		"eslint",
-		"eslintconfig",
-		"ayotte",
-		"ayottesoftware"
-	],
-	"main": "dist/index.js",
 	"author": "Richard Ayotte",
-	"license": "MIT",
-	"scripts": {
-		"build": "tsc",
-		"lint": "eslint --fix ./src"
-	},
-	"peerDependencies": {
-		"@typescript-eslint/eslint-plugin": "^5.54.0",
-		"@typescript-eslint/parser": "^5.54.0",
-		"eslint": "^8.35.0",
-		"eslint-import-resolver-typescript": "^3.5.3",
-		"eslint-plugin-import": "^2.27.5",
-		"eslint-plugin-promise": "^6.1.1"
-	},
-	"homepage": "https://github.com/RichAyotte/eslint-config-ayotte",
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:RichAyotte/eslint-config-ayotte.git"
-	},
+	"description": "Ayotte style eslinting",
 	"devDependencies": {
 		"@types/eslint": "^8.21.1",
 		"@types/node": "^18.14.6",
@@ -38,5 +11,32 @@
 		"eslint-plugin-import": "^2.27.5",
 		"eslint-plugin-promise": "^6.1.1",
 		"typescript": "^4.9.5"
-	}
+	},
+	"homepage": "https://github.com/RichAyotte/eslint-config-ayotte",
+	"keywords": [
+		"eslint",
+		"eslintconfig",
+		"ayotte",
+		"ayottesoftware"
+	],
+	"license": "MIT",
+	"main": "dist/index.js",
+	"name": "eslint-config-ayotte",
+	"peerDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.54.0",
+		"@typescript-eslint/parser": "^5.54.0",
+		"eslint": "^8.35.0",
+		"eslint-import-resolver-typescript": "^3.5.3",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-promise": "^6.1.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:RichAyotte/eslint-config-ayotte.git"
+	},
+	"scripts": {
+		"build": "tsc",
+		"lint": "eslint --fix ./src"
+	},
+	"version": "2.2.2"
 }

@@ -154,7 +154,7 @@ export default ({
 	],
 	'max-params': [
 		severity,
-		3,
+		1,
 	],
 	'max-statements': [
 		severity,
