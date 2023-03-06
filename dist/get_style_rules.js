@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// eslint-disable-next-line max-lines-per-function, require-jsdoc
+// eslint-disable-next-line max-lines-per-function
 function get_style_rules({ severity, dev_severity, }) {
     return {
         '@typescript-eslint/naming-convention': [

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function get_best_practices_rules({ severity }) {
+function get_error_rules({ severity }) {
     return {
         'no-await-in-loop': severity,
         'no-compare-neg-zero': severity,
@@ -15,4 +15,4 @@ function get_best_practices_rules({ severity }) {
         'valid-jsdoc': severity,
     };
 }
-exports.default = get_best_practices_rules;
+exports.default = get_error_rules;

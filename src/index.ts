@@ -1,35 +1,15 @@
 import { Linter } from 'eslint'
 
+import combine_rules from './combine_rules'
 import extensions from './extensions'
-import getBestPracticeRules from './get-best-practices-rules'
-import getErrorRules from './get-error-rules'
-import getEs6Rules from './get-es6-rules'
-import getNodeRules from './get-node-rules'
-import getPromiseRules from './get-promise-rules'
-import getStrictModeRules from './get-strict-mode-rules'
-import getStyleRules from './get-style-rules'
-import getVariableRules from './get-variable-rules'
-
-const severity = process.env.NODE_ENV === 'production' ? 'error' : 'warn'
-const dev_severity = process.env.NODE_ENV === 'production' ? 'error' : 'off'
-
-const rules = [
-	getBestPracticeRules,
-	getErrorRules,
-	getEs6Rules,
-	getNodeRules,
-	getPromiseRules,
-	getStyleRules,
-	getVariableRules,
-	getStrictModeRules,
-].reduce((accum, get_rules) => ({
-	...accum,
-	...get_rules({
-		dev_severity,
-		severity,
-	}),
-}), {})
-
+import get_best_practice_rules from './get_best_practices_rules'
+import get_error_rules from './get_error_rules'
+import get_es6_rules from './get_es6_rules'
+import get_node_rules from './get_node_rules'
+import get_promise_rules from './get_promise_rules'
+import get_strict_mode_rules from './get_strict_mode_rules'
+import get_style_rules from './get_style_rules'
+import get_variable_rules from './get_variable_rules'
 
 const config: Linter.Config = {
 	env: {
@@ -58,7 +38,16 @@ const config: Linter.Config = {
 		'promise',
 		'@typescript-eslint',
 	],
-	rules,
+	rules: [
+		get_best_practice_rules,
+		get_error_rules,
+		get_es6_rules,
+		get_node_rules,
+		get_promise_rules,
+		get_style_rules,
+		get_variable_rules,
+		get_strict_mode_rules,
+	].reduce(combine_rules, {}),
 	settings: { 'import/resolver': { typescript: true }},
 }
 

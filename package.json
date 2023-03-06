@@ -4,8 +4,8 @@
 	"devDependencies": {
 		"@types/eslint": "^8.21.1",
 		"@types/node": "^18.14.6",
-		"@typescript-eslint/eslint-plugin": "^5.54.0",
-		"@typescript-eslint/parser": "^5.54.0",
+		"@typescript-eslint/eslint-plugin": "^5.54.1",
+		"@typescript-eslint/parser": "^5.54.1",
 		"eslint": "^8.35.0",
 		"eslint-import-resolver-typescript": "*",
 		"eslint-plugin-import": "^2.27.5",
@@ -38,5 +38,5 @@
 		"build": "tsc",
 		"lint": "eslint --fix ./src"
 	},
-	"version": "2.2.2"
+	"version": "2.2.3"
 }
