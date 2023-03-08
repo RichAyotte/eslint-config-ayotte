@@ -1,31 +1,31 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function get_es6_rules({ severity }) {
+function get_es6_rules(input) {
     return {
         'arrow-body-style': [
-            severity,
+            input.severity,
             'as-needed',
         ],
         'arrow-parens': [
-            severity,
+            input.severity,
             'as-needed',
         ],
         'arrow-spacing': [
-            severity,
+            input.severity,
             {
                 after: true,
                 before: true,
             },
         ],
         'generator-star-spacing': [
-            severity,
+            input.severity,
             {
                 after: true,
                 before: false,
             },
         ],
         'import/order': [
-            severity,
+            input.severity,
             {
                 groups: [
                     'builtin',
@@ -37,28 +37,28 @@ function get_es6_rules({ severity }) {
                 ],
             },
         ],
-        'no-confusing-arrow': severity,
-        'no-duplicate-imports': severity,
+        'no-confusing-arrow': input.severity,
+        'no-duplicate-imports': input.severity,
         'no-restricted-imports': 'off',
-        'no-useless-computed-key': severity,
-        'no-useless-constructor': severity,
-        'no-useless-rename': severity,
-        'no-var': severity,
-        'object-shorthand': severity,
-        'prefer-arrow-callback': severity,
-        'prefer-const': severity,
-        'prefer-destructuring': severity,
-        'prefer-numeric-literals': severity,
-        'prefer-object-spread': severity,
-        'prefer-rest-params': severity,
-        'prefer-spread': severity,
-        'prefer-template': severity,
+        'no-useless-computed-key': input.severity,
+        'no-useless-constructor': input.severity,
+        'no-useless-rename': input.severity,
+        'no-var': input.severity,
+        'object-shorthand': input.severity,
+        'prefer-arrow-callback': input.severity,
+        'prefer-const': input.severity,
+        'prefer-destructuring': input.severity,
+        'prefer-numeric-literals': input.severity,
+        'prefer-object-spread': input.severity,
+        'prefer-rest-params': input.severity,
+        'prefer-spread': input.severity,
+        'prefer-template': input.severity,
         'rest-spread-spacing': [
-            severity,
+            input.severity,
             'never',
         ],
         'sort-imports': [
-            severity,
+            input.severity,
             {
                 allowSeparatedGroups: true,
                 ignoreCase: true,
@@ -66,12 +66,12 @@ function get_es6_rules({ severity }) {
                 ignoreMemberSort: false,
             },
         ],
-        'symbol-description': severity,
+        'symbol-description': input.severity,
         'template-curly-spacing': [
-            severity,
+            input.severity,
             'never',
         ],
-        'yield-star-spacing': severity,
+        'yield-star-spacing': input.severity,
     };
 }
 exports.default = get_es6_rules;

@@ -1,17 +1,15 @@
-import type {
-	Input, Output,
-} from './get_rules'
+import type { Input, Output } from './get_rules.js'
 
-export default function get_variable_rules({ severity }: Input): Output {
+export default function get_variable_rules(input: Input): Output {
 	return {
-		'init-declarations': severity,
-		'no-catch-shadow': severity,
-		'no-label-var': severity,
-		'no-restricted-globals': severity,
-		'no-shadow': severity,
-		'no-shadow-restricted-names': severity,
-		'no-undef-init': severity,
-		'no-undefined': severity,
-		'no-use-before-define': severity,
+		'init-declarations': input.severity,
+		'no-catch-shadow': input.severity,
+		'no-label-var': input.severity,
+		'no-restricted-globals': input.severity,
+		'no-shadow': input.severity,
+		'no-shadow-restricted-names': input.severity,
+		'no-undef-init': input.severity,
+		'no-undefined': input.severity,
+		'no-use-before-define': input.severity,
 	}
 }

@@ -1,19 +1,17 @@
-import type {
-	Input, Output,
-} from './get_rules'
+import type { Input, Output } from './get_rules'
 
-export default function get_error_rules({ severity }: Input): Output {
+export default function get_error_rules(input: Input): Output {
 	return {
-		'no-await-in-loop': severity,
-		'no-compare-neg-zero': severity,
+		'no-await-in-loop': input.severity,
+		'no-compare-neg-zero': input.severity,
 		'no-extra-parens': [
-			severity,
+			input.severity,
 			'functions',
 		],
-		'no-prototype-builtins': severity,
-		'no-template-curly-in-string': severity,
-		'no-unreachable': severity,
-		'no-unsafe-negation': severity,
-		'valid-jsdoc': severity,
+		'no-prototype-builtins': input.severity,
+		'no-template-curly-in-string': input.severity,
+		'no-unreachable': input.severity,
+		'no-unsafe-negation': input.severity,
+		'valid-jsdoc': input.severity,
 	}
 }

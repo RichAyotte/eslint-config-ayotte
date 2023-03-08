@@ -1,8 +1,6 @@
 import { Linter } from 'eslint'
 
-import type {
-	Input as GetRulesInput, Output as GetRulesOutput,
-} from './get_rules'
+import type { Input as GetRulesInput, Output as GetRulesOutput } from './get_rules'
 
 type Input = [Linter.RulesRecord, (input: GetRulesInput) => GetRulesOutput]
 type Output = Linter.RulesRecord

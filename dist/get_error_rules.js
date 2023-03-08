@@ -1,18 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function get_error_rules({ severity }) {
+function get_error_rules(input) {
     return {
-        'no-await-in-loop': severity,
-        'no-compare-neg-zero': severity,
+        'no-await-in-loop': input.severity,
+        'no-compare-neg-zero': input.severity,
         'no-extra-parens': [
-            severity,
+            input.severity,
             'functions',
         ],
-        'no-prototype-builtins': severity,
-        'no-template-curly-in-string': severity,
-        'no-unreachable': severity,
-        'no-unsafe-negation': severity,
-        'valid-jsdoc': severity,
+        'no-prototype-builtins': input.severity,
+        'no-template-curly-in-string': input.severity,
+        'no-unreachable': input.severity,
+        'no-unsafe-negation': input.severity,
+        'valid-jsdoc': input.severity,
     };
 }
 exports.default = get_error_rules;

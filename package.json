@@ -12,6 +12,9 @@
 		"eslint-plugin-promise": "^6.1.1",
 		"typescript": "^4.9.5"
 	},
+	"engines": {
+		"node": ">=18"
+	},
 	"homepage": "https://github.com/RichAyotte/eslint-config-ayotte",
 	"keywords": [
 		"eslint",
@@ -35,8 +38,8 @@
 		"url": "git@github.com:RichAyotte/eslint-config-ayotte.git"
 	},
 	"scripts": {
-		"build": "tsc",
+		"build": "rm -rf dist && tsc",
 		"lint": "eslint --fix ./src"
 	},
-	"version": "2.2.3"
+	"version": "2.2.4"
 }
