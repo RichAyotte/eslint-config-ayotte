@@ -34,6 +34,8 @@ export default function get_es6_rules(input: Input): Output {
 					'parent',
 					'sibling',
 					'index',
+					'object',
+					'type',
 				],
 			},
 		],
@@ -57,15 +59,7 @@ export default function get_es6_rules(input: Input): Output {
 			input.severity,
 			'never',
 		],
-		'sort-imports': [
-			input.severity,
-			{
-				allowSeparatedGroups: true,
-				ignoreCase: true,
-				ignoreDeclarationSort: false,
-				ignoreMemberSort: false,
-			},
-		],
+		'sort-imports': 'off',
 		'symbol-description': input.severity,
 		'template-curly-spacing': [
 			input.severity,

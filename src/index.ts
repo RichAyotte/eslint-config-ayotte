@@ -34,9 +34,9 @@ const config: Linter.Config = {
 		project: true,
 	},
 	plugins: [
+		'@typescript-eslint',
 		'import',
 		'promise',
-		'@typescript-eslint',
 	],
 	rules: [
 		get_best_practice_rules,
@@ -48,7 +48,12 @@ const config: Linter.Config = {
 		get_variable_rules,
 		get_strict_mode_rules,
 	].reduce(combine_rules, {}),
-	settings: { 'import/resolver': { typescript: true }},
+	settings: {
+		'import/resolver': {
+			node: true,
+			typescript: true,
+		},
+	},
 }
 
 module.exports = config

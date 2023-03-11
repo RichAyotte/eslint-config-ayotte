@@ -33,9 +33,9 @@ const config = {
         project: true,
     },
     plugins: [
+        '@typescript-eslint',
         'import',
         'promise',
-        '@typescript-eslint',
     ],
     rules: [
         get_best_practices_rules_1.default,
@@ -47,6 +47,11 @@ const config = {
         get_variable_rules_1.default,
         get_strict_mode_rules_1.default,
     ].reduce(combine_rules_1.default, {}),
-    settings: { 'import/resolver': { typescript: true } },
+    settings: {
+        'import/resolver': {
+            node: true,
+            typescript: true,
+        },
+    },
 };
 module.exports = config;
