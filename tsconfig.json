@@ -10,7 +10,8 @@
     },
     "include":
     [
-        ".eslintrc.cjs",
+        "eslint.config.js",
+        "declarations/**/*.ts",
         "src"
     ]
 }

@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 // eslint-disable-next-line max-lines-per-function
-function get_style_rules(input) {
+export default function get_style_rules({ severity, dev_severity, }) {
     return {
         '@typescript-eslint/naming-convention': [
             'error',
@@ -14,32 +12,32 @@ function get_style_rules(input) {
                 ],
             },
         ],
-        '@typescript-eslint/type-annotation-spacing': input.severity,
+        '@typescript-eslint/type-annotation-spacing': severity,
         'array-bracket-newline': [
-            input.severity,
+            severity,
             {
                 minItems: 2,
                 multiline: true,
             },
         ],
         'array-bracket-spacing': [
-            input.severity,
+            severity,
             'never',
         ],
         'array-element-newline': [
-            input.severity,
+            severity,
             {
                 minItems: 2,
                 multiline: true,
             },
         ],
-        'block-spacing': input.severity,
+        'block-spacing': severity,
         'brace-style': [
-            input.severity,
+            severity,
             'stroustrup',
         ],
         'capitalized-comments': [
-            input.dev_severity,
+            dev_severity,
             'always',
             {
                 ignoreConsecutiveComments: true,
@@ -47,7 +45,7 @@ function get_style_rules(input) {
             },
         ],
         'comma-dangle': [
-            input.severity,
+            severity,
             {
                 arrays: 'always-multiline',
                 exports: 'never',
@@ -56,48 +54,48 @@ function get_style_rules(input) {
                 objects: 'always-multiline',
             },
         ],
-        'comma-spacing': input.severity,
+        'comma-spacing': severity,
         'comma-style': [
-            input.severity,
+            severity,
             'last',
         ],
-        'computed-property-spacing': input.severity,
+        'computed-property-spacing': severity,
         'consistent-this': [
-            input.severity,
+            severity,
             'that',
         ],
-        'eol-last': input.severity,
-        'func-call-spacing': input.severity,
-        'func-name-matching': input.severity,
+        'eol-last': severity,
+        'func-call-spacing': severity,
+        'func-name-matching': severity,
         'func-names': [
-            input.severity,
+            severity,
             'as-needed',
         ],
         'func-style': [
-            input.severity,
+            severity,
             'declaration',
         ],
         'id-blacklist': [
-            input.severity,
+            severity,
             'callback',
         ],
         'id-length': 'off',
         'id-match': 'off',
         indent: [
-            input.severity,
+            severity,
             'tab',
             { MemberExpression: 0 },
         ],
-        'jsx-quotes': input.severity,
-        'key-spacing': input.severity,
-        'keyword-spacing': input.severity,
-        'line-comment-position': input.severity,
+        'jsx-quotes': severity,
+        'key-spacing': severity,
+        'keyword-spacing': severity,
+        'line-comment-position': severity,
         'linebreak-style': [
-            input.severity,
+            severity,
             'unix',
         ],
         'lines-around-comment': [
-            input.severity,
+            severity,
             {
                 afterBlockComment: false,
                 afterLineComment: false,
@@ -113,17 +111,17 @@ function get_style_rules(input) {
                 beforeLineComment: false,
             },
         ],
-        'lines-around-directive': input.severity,
+        'lines-around-directive': severity,
         'max-classes-per-file': [
-            input.severity,
+            severity,
             1,
         ],
         'max-depth': [
-            input.severity,
+            severity,
             3,
         ],
         'max-len': [
-            input.severity,
+            severity,
             {
                 code: 100,
                 ignoreRegExpLiterals: true,
@@ -133,7 +131,7 @@ function get_style_rules(input) {
             },
         ],
         'max-lines': [
-            input.severity,
+            severity,
             {
                 max: 310,
                 skipBlankLines: true,
@@ -141,7 +139,7 @@ function get_style_rules(input) {
             },
         ],
         'max-lines-per-function': [
-            input.severity,
+            severity,
             {
                 max: 150,
                 skipBlankLines: true,
@@ -149,61 +147,61 @@ function get_style_rules(input) {
             },
         ],
         'max-nested-callbacks': [
-            input.severity,
+            severity,
             3,
         ],
         'max-params': [
-            input.severity,
+            severity,
             1,
         ],
         'max-statements': [
-            input.severity,
+            severity,
             30,
         ],
         'max-statements-per-line': [
-            input.severity,
+            severity,
             { max: 1 },
         ],
         'multiline-ternary': 'off',
-        'new-cap': input.severity,
-        'new-parens': input.severity,
+        'new-cap': severity,
+        'new-parens': severity,
         'newline-after-var': 'off',
         'newline-before-return': 'off',
         'newline-per-chained-call': [
-            input.severity,
+            severity,
             { ignoreChainWithDepth: 2 },
         ],
-        'no-array-constructor': input.severity,
-        'no-bitwise': input.severity,
+        'no-array-constructor': severity,
+        'no-bitwise': severity,
         'no-continue': 'off',
         'no-inline-comments': 'off',
-        'no-lonely-if': input.severity,
+        'no-lonely-if': severity,
         'no-mixed-operators': [
-            input.severity,
+            severity,
             { allowSamePrecedence: true },
         ],
-        'no-multi-assign': input.severity,
-        'no-multiple-empty-lines': input.severity,
-        'no-negated-condition': input.severity,
-        'no-nested-ternary': input.severity,
-        'no-new-object': input.severity,
+        'no-multi-assign': severity,
+        'no-multiple-empty-lines': severity,
+        'no-negated-condition': severity,
+        'no-nested-ternary': severity,
+        'no-new-object': severity,
         'no-plusplus': [
-            input.severity,
+            severity,
             { allowForLoopAfterthoughts: false },
         ],
         'no-restricted-syntax': 'off',
         'no-tabs': 'off',
         'no-ternary': 'off',
-        'no-trailing-spaces': input.severity,
+        'no-trailing-spaces': severity,
         'no-underscore-dangle': [
-            input.severity,
+            severity,
             { allowAfterThis: true },
         ],
-        'no-unneeded-ternary': input.severity,
-        'no-whitespace-before-property': input.severity,
+        'no-unneeded-ternary': severity,
+        'no-whitespace-before-property': severity,
         'nonblock-statement-body-position': 'off',
         'object-curly-newline': [
-            input.severity,
+            severity,
             {
                 ExportDeclaration: {
                     minProperties: 4,
@@ -224,44 +222,44 @@ function get_style_rules(input) {
             },
         ],
         'object-curly-spacing': [
-            input.severity,
+            severity,
             'always',
             {
                 arraysInObjects: false,
                 objectsInObjects: false,
             },
         ],
-        'object-property-newline': input.severity,
+        'object-property-newline': severity,
         'one-var': [
-            input.severity,
+            severity,
             'never',
         ],
         'one-var-declaration-per-line': 'off',
-        'operator-assignment': input.severity,
+        'operator-assignment': severity,
         'operator-linebreak': [
-            input.severity,
+            severity,
             'before',
         ],
         'padded-blocks': [
-            input.severity,
+            severity,
             'never',
         ],
         'quote-props': [
-            input.severity,
+            severity,
             'as-needed',
         ],
         quotes: [
-            input.severity,
+            severity,
             'single',
             { allowTemplateLiterals: true },
         ],
         semi: [
-            input.severity,
+            severity,
             'never',
         ],
         'semi-spacing': 'off',
         'sort-keys': [
-            input.severity,
+            severity,
             'asc',
             {
                 caseSensitive: false,
@@ -269,15 +267,15 @@ function get_style_rules(input) {
             },
         ],
         'sort-vars': [
-            input.severity,
+            severity,
             { ignoreCase: true },
         ],
         'space-before-blocks': [
-            input.severity,
+            severity,
             'always',
         ],
         'space-before-function-paren': [
-            input.severity,
+            severity,
             {
                 anonymous: 'never',
                 asyncArrow: 'always',
@@ -285,21 +283,20 @@ function get_style_rules(input) {
             },
         ],
         'space-in-parens': [
-            input.severity,
+            severity,
             'never',
         ],
-        'space-infix-ops': input.severity,
-        'space-unary-ops': input.severity,
+        'space-infix-ops': severity,
+        'space-unary-ops': severity,
         'spaced-comment': [
-            input.severity,
+            severity,
             'always',
         ],
         'template-tag-spacing': [
-            input.severity,
+            severity,
             'never',
         ],
-        'unicode-bom': input.severity,
-        'wrap-regex': input.severity,
+        'unicode-bom': severity,
+        'wrap-regex': severity,
     };
 }
-exports.default = get_style_rules;

@@ -1,9 +1,9 @@
-import type { Input, Output } from './get_rules'
+import type { Input, Output } from './get_rules.js'
 
-export default function get_strict_mode_rules(input: Input): Output {
+export default function get_strict_mode_rules({ severity }: Input): Output {
 	return {
 		strict: [
-			input.severity,
+			severity,
 			'safe',
 		],
 	}

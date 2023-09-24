@@ -1,18 +1,14 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-function get_error_rules(input) {
+export default function get_error_rules({ severity }) {
     return {
-        'no-await-in-loop': input.severity,
-        'no-compare-neg-zero': input.severity,
+        'no-await-in-loop': severity,
+        'no-compare-neg-zero': severity,
         'no-extra-parens': [
-            input.severity,
+            severity,
             'functions',
         ],
-        'no-prototype-builtins': input.severity,
-        'no-template-curly-in-string': input.severity,
-        'no-unreachable': input.severity,
-        'no-unsafe-negation': input.severity,
-        'valid-jsdoc': input.severity,
+        'no-prototype-builtins': severity,
+        'no-template-curly-in-string': severity,
+        'no-unreachable': severity,
+        'no-unsafe-negation': severity,
     };
 }
-exports.default = get_error_rules;

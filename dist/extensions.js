@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = [
+export default [
     'eslint:recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
@@ -9,4 +7,5 @@ exports.default = [
     'plugin:promise/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:n/recommended',
 ];
