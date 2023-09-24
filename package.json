@@ -37,7 +37,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:RichAyotte/eslint-config-ayotte.git"
+		"url": "git+ssh://git@github.com/RichAyotte/eslint-config-ayotte.git"
 	},
 	"scripts": {
 		"build": "rm -rf dist && tsc",
