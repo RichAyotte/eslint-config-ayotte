@@ -6,7 +6,7 @@ export default function get_node_rules({ severity }: Input): Output {
 		'global-require': severity,
 		'handle-callback-err': severity,
 		'n/callback-return': [severity],
-		'n/file-extension-in-import': [severity],
+		'n/file-extension-in-import': 'off',
 		'n/no-extraneous-import': [
 			severity,
 			{ allowModules: ['@eslint/js']},
