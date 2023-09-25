@@ -8,6 +8,7 @@ import extensions from './extensions.js'
 import get_best_practice_rules from './get_best_practices_rules.js'
 import get_error_rules from './get_error_rules.js'
 import get_es6_rules from './get_es6_rules.js'
+import get_functional_rules from './get_functional_rules.js'
 import get_node_rules from './get_node_rules.js'
 import get_promise_rules from './get_promise_rules.js'
 import get_strict_mode_rules from './get_strict_mode_rules.js'
@@ -37,16 +38,18 @@ const legacy_config: Linter.Config = {
 		'import',
 		'promise',
 		'n',
+		'functional',
 	],
 	rules: [
 		get_best_practice_rules,
 		get_error_rules,
 		get_es6_rules,
+		get_functional_rules,
 		get_node_rules,
 		get_promise_rules,
+		get_strict_mode_rules,
 		get_style_rules,
 		get_variable_rules,
-		get_strict_mode_rules,
 	].reduce(combine_rules, {}),
 	settings: {
 		'import/resolver': {

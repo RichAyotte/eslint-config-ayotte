@@ -8,6 +8,8 @@ declare module '@eslint/eslintrc' {
 		resolvePluginsRelativeTo: string
 	}
 
+	// Only here for types
+	// eslint-disable-next-line functional/no-classes
 	export class FlatCompat {
 		constructor(config: FlatCompatInput)
 		config(config: Linter.Config): Linter.FlatConfig[]
