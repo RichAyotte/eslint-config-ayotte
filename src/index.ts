@@ -1,6 +1,6 @@
-import legacy_config from './legacy_config.js'
+import legacy from './legacy.js'
 import type { Linter } from 'eslint'
 
-const config: Linter.FlatConfig[] = [...legacy_config]
+const config: Linter.FlatConfig[] = [...legacy]
 
 export default config

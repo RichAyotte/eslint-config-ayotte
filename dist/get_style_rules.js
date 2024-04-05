@@ -48,9 +48,9 @@ export default function get_style_rules({ severity, dev_severity, }) {
             severity,
             {
                 arrays: 'always-multiline',
-                exports: 'never',
-                functions: 'never',
-                imports: 'never',
+                exports: 'always-multiline',
+                functions: 'always-multiline',
+                imports: 'always-multiline',
                 objects: 'always-multiline',
             },
         ],

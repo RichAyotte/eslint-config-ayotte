@@ -52,9 +52,9 @@ export default function get_style_rules({
 			severity,
 			{
 				arrays: 'always-multiline',
-				exports: 'never',
-				functions: 'never',
-				imports: 'never',
+				exports: 'always-multiline',
+				functions: 'always-multiline',
+				imports: 'always-multiline',
 				objects: 'always-multiline',
 			},
 

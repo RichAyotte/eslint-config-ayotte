@@ -1,3 +1,3 @@
-import legacy_config from './legacy_config.js';
-const config = [...legacy_config];
+import legacy from './legacy.js';
+const config = [...legacy];
 export default config;

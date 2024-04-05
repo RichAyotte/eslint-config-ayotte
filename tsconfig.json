@@ -1,15 +1,17 @@
 {
-    "compilerOptions":
-    {
+    "compilerOptions": {
+        "lib": [
+            "ESNext"
+        ],
         "module": "NodeNext",
         "moduleResolution": "NodeNext",
         "outDir": "dist",
         "rootDir": "src",
+        "skipLibCheck": true,
         "strict": true,
         "target": "ESNext"
     },
-    "include":
-    [
+    "include": [
         "eslint.config.js",
         "declarations/**/*.ts",
         "src"
